@@ -1,0 +1,136 @@
+* {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.searchInput {
+  display: block;
+  margin: 10px auto 15px;
+  width: 400px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.nav {
+  margin: 20px auto;
+}
+.nav button {
+  background: none;
+  margin: 0 10px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  border: 2px solid #12274d;
+  transition: 500ms ease-in-out;
+  cursor: pointer;
+}
+.nav button:hover, .nav button :active {
+  color: white;
+  background: #12274d;
+}
+
+.flex-parent {
+  width: 80%;
+  margin: 25px auto 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.flex-parent .card {
+  box-sizing: border-box;
+  margin: 10px;
+  height: 500px;
+  width: calc(100% * (1/4) - 20px - 2px);
+  border: 2px solid #12274d;
+  border-radius: 10px;
+}
+@media screen and (max-width: 800px) {
+  .flex-parent .card {
+    width: 90%;
+  }
+}
+.flex-parent .card .img-outer {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+.flex-parent .card .img-outer a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.flex-parent .card .img-outer a img {
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.flex-parent .card .tags {
+  position: relative;
+  padding: 15px 10px;
+}
+.flex-parent .card .tags span {
+  display: none;
+  padding: 3px 10px;
+  color: white;
+  background: #12274d;
+  box-shadow: 0 1px 1px 1px rgba(13, 21, 41, 0.81);
+  margin: 3px 5px;
+  border-radius: 10px;
+}
+.flex-parent .card .tags span.active {
+  display: inline-block;
+}
+.flex-parent .card .tags .tagsInput {
+  width: 90%;
+  margin: 0 5%;
+  height: 30px;
+  padding: 0 5px;
+  position: absolute;
+  box-sizing: border-box;
+  border: unset;
+  border-bottom: 2px solid #12274d;
+  display: none;
+  background: snow;
+}
+.flex-parent .card .tags .tagsInput.active {
+  display: block;
+}
+.flex-parent .card .tags .tagsInput, .flex-parent .card .tags .tagsInput::placeholder {
+  text-align: center;
+}
+.flex-parent .card .tags .tagsInput::placeholder {
+  font-size: 12px;
+}
+.flex-parent .card .likes, .flex-parent .card .comments {
+  margin: 10px 0;
+}
+
+.fullcard {
+  width: 70%;
+  margin: 0 auto;
+}
+.fullcard .img-outer {
+  width: 100%;
+}
+.fullcard .img-outer img {
+  width: 100%;
+  height: auto;
+}
+.fullcard .fullcard-info {
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+}
+.fullcard .fullcard-info p {
+  padding: 10px 5px;
+}
+
+/*# sourceMappingURL=styles.css.map */
