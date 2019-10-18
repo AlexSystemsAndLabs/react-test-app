@@ -66,7 +66,7 @@ class CardsList extends React.Component {
                                     id = {card.id}
                                     key = {card.id}
                                     webformatURL = {card.webformatURL}
-                                    tags = { card.id === this.props.changedItem.id ? this.props.changedItem.tags : card.tags }
+                                    tags = { card.tags }
                                     likes = {card.likes}
                                     comments = {card.comments}
                                     onDoubleClick = { e => this.doubleClickHandler(e) }
