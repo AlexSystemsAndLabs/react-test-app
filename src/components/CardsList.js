@@ -18,6 +18,10 @@ class CardsList extends React.Component {
         this.props.dispatch(Actions.fetchData());
     }
 
+    getImage = (id) => {
+        this.props.dispatch(Actions.fetchPic(id))
+    }
+
     filterCards(e){
             this.props.dispatch(Actions.filterCards(e.target.value))
         }
@@ -69,6 +73,7 @@ class CardsList extends React.Component {
                                     tags = { card.tags }
                                     likes = {card.likes}
                                     comments = {card.comments}
+                                    getImage = { e => this.getImage(card.id) }
                                     onDoubleClick = { e => this.doubleClickHandler(e) }
                                     updateTags = { e => this.updateTags(e,card.id) }
                                 />

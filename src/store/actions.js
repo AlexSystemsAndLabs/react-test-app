@@ -12,13 +12,10 @@ export function fetchData() {
     };
 }
 export function fetchPic(id) {
-    return async(dispatch) => {
-        try {
-            const hit = await pixabayService.getOneHit(id);
+    return (dispatch, getState) => {
+            const allHits = getState().allHits
+            const hit = allHits.find( hit => hit.id === id )
             dispatch({ type: types.GET_ONE_IMG, image : hit });
-        } catch (error) {
-            console.error(error);
-        }
     };
 }
 

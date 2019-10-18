@@ -11,11 +11,6 @@ class FullCard extends React.Component {
         super(props);
     }
 
-    componentWillMount() {
-        const id = getId()
-        this.props.dispatch(Actions.fetchPic(id))
-    }
-
      render(){
          if (!this.props.image) return <div>Loading...</div>;
         return(
@@ -43,11 +38,8 @@ class FullCard extends React.Component {
 }
 
 function mapStateToProps(state) {
-    const changedItem = Selectors.getChangedItem(state)
-    const image = Selectors.getOneImage(state)
-console.log(getId())
     return {
-     image : changedItem.id === image.id ? changedItem : image
+        image : Selectors.getOneImage(state)
     };
 }
 

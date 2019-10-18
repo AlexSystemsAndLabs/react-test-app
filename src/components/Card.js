@@ -7,7 +7,7 @@ const Card = React.memo((props) => {
                  key={props.id}>
                 <p className="img-outer">
                     <Link to={`/:${props.id}`}>
-                        <img src={props.webformatURL} alt="Не удалось загрузить изображение"/>
+                        <img src={props.webformatURL} alt="Не удалось загрузить изображение" onClick={ props.getImage }/>
                     </Link>
                 </p>
                 <div className="tags"
